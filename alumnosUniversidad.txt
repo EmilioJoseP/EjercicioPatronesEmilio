@@ -1,0 +1,2 @@
+nombre:Vicente#apellidos:Quiles Sáez#añoNacimiento:1986#ciudad:Elche#telefono:1111111
+nombre:Emilio#apellidos:Pradera#añoNacimiento:1996#ciudad:Elche#telefono:21222222

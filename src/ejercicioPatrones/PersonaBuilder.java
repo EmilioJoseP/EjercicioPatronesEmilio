@@ -1,44 +1,16 @@
 package ejercicioPatrones;
 
-public class Persona {
+public class PersonaBuilder {
 	private String nombre;
 	private String apellidos;
 	private int añoNacimiento;
 	private String ciudad;
 	private String telefono;
 	
-	public Persona(PersonaBuilder personaBuilder) {
-		this.nombre = personaBuilder.getNombre();
-		this.apellidos = personaBuilder.getApellidos();
-		this.añoNacimiento = personaBuilder.getAñoNacimiento();
-		this.ciudad = personaBuilder.getCiudad();
-		this.telefono = personaBuilder.getTelefono();
-	}
+	public PersonaBuilder() {}
 	
-	public String toString() {
-		String paraDevolver = "";
-		
-		if (this.nombre != null) {
-			paraDevolver += this.nombre + " ";
-		} 
-		
-		if (this.apellidos != null) {
-			paraDevolver += this.apellidos + " ";
-		} 
-		
- 		if (this.añoNacimiento != 0) {
-			paraDevolver += this.añoNacimiento + " ";
-		}
- 		
- 		if (this.ciudad != null) {
-			paraDevolver += this.ciudad + " ";
-		}
-
- 		if (this.telefono != null) {
-			paraDevolver += this.telefono + " ";
-		}
-		
-		return paraDevolver;
+	public Persona build() {
+		return new Persona(this);
 	}
 
 	public String getNombre() {
